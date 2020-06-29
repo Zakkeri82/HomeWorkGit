@@ -21,7 +21,7 @@ public class Bugfix {
             }
             else if(persons > 0) {
                 regular++;
-            }
+            } else defaults++;
         }
         System.out.println("billionare = " + billionare);
         System.out.println("regular = " + regular);
