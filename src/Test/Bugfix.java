@@ -14,7 +14,7 @@ public class Bugfix {
         int regular = 0;
         int defaults = 0;
         for(Integer persons : list) {
-            persons += (int)(Math.random() * Integer.MAX_VALUE);
+            persons += (int)(Math.random() * Integer.MAX_VALUE + 1);
             if(persons > 1_000_000_000) {
                 billionare++;
             }
