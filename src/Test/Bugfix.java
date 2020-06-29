@@ -8,13 +8,13 @@ public class Bugfix {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            list.add((int)(Math.random() * Integer.MAX_VALUE));
+            list.add(getMet());
         }
         int billionare =0;
         int regular = 0;
         int defaults = 0;
         for(Integer persons : list) {
-            persons += (int)(Math.random() * Integer.MAX_VALUE);
+            persons += getMet();
             if(persons > 1_000_000_000) {
                 billionare++;
             }
@@ -29,5 +29,9 @@ public class Bugfix {
         System.out.println("regular = " + regular);
         System.out.println("defaults = " + defaults);
         System.out.println("defaults + billionare + regular = " + (defaults + billionare + regular));
+    }
+
+    private static int getMet() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
     }
 }
